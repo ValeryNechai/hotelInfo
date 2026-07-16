@@ -76,7 +76,7 @@ public class HotelController {
     @Operation(summary = "Cоздание нового отеля",
             description = "Возвращает полную информацию о новом отеле")
     @ApiResponses({
-            @ApiResponse(responseCode = "201", description = "Отель успешно создан"),
+            @ApiResponse(responseCode = "200", description = "Отель успешно создан"),
             @ApiResponse(responseCode = "400", description = "Запрос составлен некорректно")
     })
     public HotelShortDto createHotel(
