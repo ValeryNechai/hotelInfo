@@ -1,5 +1,8 @@
-package com.gpsolutions.hotelInfo.entity;
+package com.gpsolutions.hotelInfo.hotel.model;
 
+import com.gpsolutions.hotelInfo.address.model.Address;
+import com.gpsolutions.hotelInfo.amenity.model.Amenity;
+import com.gpsolutions.hotelInfo.contacts.model.Contacts;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,7 +22,9 @@ public class Hotel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "name", unique = true, nullable = false)
     private String name;
+
     private String description;
     private String brand;
 

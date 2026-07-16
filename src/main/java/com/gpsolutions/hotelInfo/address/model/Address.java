@@ -1,4 +1,4 @@
-package com.gpsolutions.hotelInfo.entity;
+package com.gpsolutions.hotelInfo.address.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -17,7 +17,7 @@ public class Address {
     private Long id;
 
     @Column(name = "house_number")
-    private String houseNumber;
+    private Integer houseNumber;
 
     private String street;
     private String city;

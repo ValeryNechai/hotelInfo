@@ -1,4 +1,4 @@
-package com.gpsolutions.hotelInfo.entity;
+package com.gpsolutions.hotelInfo.hotel.model;
 
 import jakarta.persistence.*;
 import lombok.*;
