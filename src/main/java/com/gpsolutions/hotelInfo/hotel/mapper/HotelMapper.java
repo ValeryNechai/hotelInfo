@@ -2,6 +2,7 @@ package com.gpsolutions.hotelInfo.hotel.mapper;
 
 import com.gpsolutions.hotelInfo.address.mapper.AddressMapper;
 import com.gpsolutions.hotelInfo.amenity.mapper.AmenityMapper;
+import com.gpsolutions.hotelInfo.amenity.model.Amenity;
 import com.gpsolutions.hotelInfo.contacts.mapper.ContactsMapper;
 import com.gpsolutions.hotelInfo.hotel.dto.HotelFullDto;
 import com.gpsolutions.hotelInfo.hotel.dto.HotelShortDto;
@@ -31,7 +32,7 @@ public final class HotelMapper {
                 .arrivalTime(hotel.getArrivalTime())
                 .amenities(
                         hotel.getAmenities().stream()
-                                .map(AmenityMapper::mapToAmenityDto)
+                                .map(Amenity::getName)
                                 .collect(Collectors.toSet())
                 )
                 .build();

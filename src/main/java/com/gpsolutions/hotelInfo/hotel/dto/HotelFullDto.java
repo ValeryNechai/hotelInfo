@@ -22,5 +22,5 @@ public class HotelFullDto {
     private AddressFullDto address;
     private ContactsFullDto contacts;
     private ArrivalTime arrivalTime;
-    private Set<AmenityDto> amenities;
+    private Set<String> amenities;
 }

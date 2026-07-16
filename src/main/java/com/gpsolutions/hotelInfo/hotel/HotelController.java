@@ -27,7 +27,7 @@ public class HotelController {
     }
 
     @GetMapping("/hotels/{id}")
-    public HotelFullDto getAllInformationByHotel(@PathVariable Long hotelId) {
+    public HotelFullDto getAllInformationByHotel(@PathVariable(name = "id") Long hotelId) {
         return hotelService.getAllInformationByHotel(hotelId);
     }
 
@@ -47,7 +47,7 @@ public class HotelController {
 
     @PostMapping("/hotels/{id}/amenities")
     @ResponseStatus(HttpStatus.OK)
-    public void addAmenitiesToHotel(@PathVariable Long hotelId,
+    public void addAmenitiesToHotel(@PathVariable(name = "id") Long hotelId,
                                     @RequestBody List<String> amenities) {
         hotelService.addAmenitiesToHotel(hotelId, amenities);
     }
